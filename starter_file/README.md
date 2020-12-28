@@ -69,15 +69,17 @@ To improve the model we can use different target metric like AUC_weighted or Rec
 As it is a binary classification problem, the model used for HyperDrive is Logistic Regression. 
 - It is easy to understand
 - Trains very easily and faster compared to complex models
+
+
 The parameters used for hyperparameter tuning are:
 - Regularization Strength (C) with range 0.1 to 1.0
     -- Inverse of regularization strength. Smaller values cause stronger regularization
 - Max Iterations (max_iter) with values 50, 100, 150 and 200
     -- Maximum number of iterations to converge
+
 <img src="Screenshots/hyperdrive_run.png">
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 The best Accuracy for the HyperDrive model is 7666666666666667 %
 The best hyperparameters for this accuracy are:
 - 'Regularization Strength:': 0.5077980350098886
@@ -91,16 +93,21 @@ The AutoMl model is deployed using Azure Container Instance as a WebService. Bes
 Cpu_cores and memory_gb are initialized as 1 for the deployment configuration. The aci service is then created using workspace, aci service name, model, inference config and deployment configuration.
 
 The model is successfully deployed as a web service and a REST endpoint is created with status Healthy. A scoring uri is also generated to test the endpoint.
+
 <img src="Screenshots/model_deployment.png">
+
 <img src="Screenshots/deployed_endpoint.png">
 
 The endpoint is tested in 2 ways: 
 - using endpoint.py file which passes 2 data points as json 
 - using 3 random sample data points and to see the actual value and predicted value 
+
 <img src="Screenshots/model_test.png">
 
 ## Screen Recording
 
 
 ## Future Improvements
-
+- Larger dataset can be used to increase data quality
+- Different models can also be used with hyperparameter tuning
+- Feature engineering can be performed using PCA 
