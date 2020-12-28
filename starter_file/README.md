@@ -60,6 +60,14 @@ Experiment timeout is set to control the use of resources. Maximum 4 iterations 
 
 ### Results
 The best performing model after training using AutoML is VotingEnsemble with the Accuracy of 88.49350649350649 %
+
+The models that VotingEnsemble used with it's weight are:
+```
+'ensembled_algorithms': "['LightGBM', 'XGBoostClassifier', 'XGBoostClassifier', 'LightGBM', 'LightGBM', 'RandomForest', 'ExtremeRandomTrees', 'GradientBoosting', 'RandomForest', 'XGBoostClassifier', 'LogisticRegression']"
+
+'ensemble_weights': '[0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091, 0.09090909090909091]'
+```
+
 To improve the model we can use different target metric like AUC_weighted or Recall. We can also try hypertuning the parameters to see if there is any improvement.
 
 <img src="Screenshots/automl_best_model.png">
@@ -105,7 +113,7 @@ The endpoint is tested in 2 ways:
 <img src="Screenshots/model_test.png">
 
 ## Screen Recording
-
+Link to screencast: [Link](https://youtu.be/fj7Av9YiuiY)
 
 ## Future Improvements
 - Larger dataset can be used to increase data quality
