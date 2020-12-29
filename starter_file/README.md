@@ -73,6 +73,10 @@ To improve the model we can use different target metric like AUC_weighted or Rec
 <img src="Screenshots/automl_best_model.png">
 <img src="Screenshots/automl_best_accuracy.png">
 
+**Best Run Id**
+
+<img src="Screenshots/automl_bestrunid.PNG">
+
 **Best AutoML Model Registered**
 
 <img src="Screenshots/automl_registered.PNG">
