@@ -73,6 +73,10 @@ To improve the model we can use different target metric like AUC_weighted or Rec
 <img src="Screenshots/automl_best_model.png">
 <img src="Screenshots/automl_best_accuracy.png">
 
+**Best AutoML Model Registered**
+
+<img src="Screenshots/automl_registered.PNG">
+
 ## Hyperparameter Tuning
 As it is a binary classification problem, the model used for HyperDrive is Logistic Regression. 
 - It is easy to understand
@@ -95,6 +99,10 @@ The best hyperparameters for this accuracy are:
 
 To improve the model we can use different target metric to get broader perspective. We can also try increasing the range of the hyperparameters to see if there is any improvement.
 <img src="Screenshots/hyperdrive_bestmodel.png">
+
+**Best HyperDrive Model Registered**
+
+<img src="Screenshots/hyperdrive_registered.PNG">
 
 ## Model Deployment
 The AutoMl model is deployed using Azure Container Instance as a WebService. Best run environment and score.py file is provided to the InferenceConfig.
